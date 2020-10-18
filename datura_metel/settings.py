@@ -74,12 +74,20 @@ WSGI_APPLICATION = 'datura_metel.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'datura_metel',
+#     }
+# }   
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'datura_metel',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'datura.metel', # This is where you put the name of the db file. 
+                 # If one doesn't exist, it will be created at migration time.
     }
-}   
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
