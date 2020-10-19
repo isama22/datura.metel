@@ -1,3 +1,44 @@
-body {
-    background-color: red;
-  }
+html {
+    background-color: black;
+    font-family: monospace;
+    color: blue;
+}
+
+.home-background-image {
+    background-image: url(https://i.postimg.cc/HxnH7FVf/cassini-space-probe-saturn.jpg);
+    background-size: cover;
+    height: 1000px;
+    width: 1430px;
+}
+
+.header {
+    background-color: white;
+    width: 1400px;
+}
+
+.login {
+    width: 60px;
+    margin-left: 20px;
+}
+.home-box {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.home-page {
+    background-color: wheat;
+    height: 600px;
+    width: 1300px;
+    background-color: rgba(219, 197, 194, 0.69);
+    margin-top: 20px;
+}
+
+.post-box {
+    background-color: rgba(219, 230, 226, 0.76);
+    width: 150px;
+    height: 150px;
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 20px; */
+}
