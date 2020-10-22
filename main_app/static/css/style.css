@@ -33,7 +33,6 @@ html {
     align-content: center;
 }
 .home-page {
-    background-color: wheat;
     height: 550px;
     width: 1350px;
     background-color: rgba(219, 197, 194, 0.46);
@@ -48,4 +47,14 @@ html {
     width: 150px;
     height: 150px;
     margin: 20px;
+}
+
+.detail-page {
+    display: flex;
+    flex-direction: column;
+
+    height: 550px;
+    width: 1350px;
+    background-color: rgba(219, 197, 194, 0.46);
+    margin-top: 40px;
 }

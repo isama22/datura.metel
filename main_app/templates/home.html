@@ -3,23 +3,8 @@
 
 <div class="home-box">
     <div class="home-page">
-        <div class="post-box">
-            <p>text</p>
-        </div>
-        <div class="post-box">
-            <p>text</p>
-        </div>
-        <div class="post-box">
-            <p>text</p>
-        </div>
-        <div class="post-box">
-            <p>text</p>
-        </div>
-        <div class="post-box">
-            <p>text</p>
-        </div>
         {% for post in posts %}
-        <a href="">
+        <a href="{% url 'detail' post.id %}">
             <div class="post-box">
                <span>{{ post.title }}</span>
                <p>{{ post.description }}</p>
