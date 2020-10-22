@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Post
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # Add the following import
 # from django.http import HttpResponse
 
@@ -24,4 +24,13 @@ def post(request):
 class PostCreate(CreateView):
   model = Post
   fields = '__all__'
+  success_url = '/'
+
+class PostUpdate(UpdateView):
+  model = Post
+  # Let's disallow the renaming of a cat by excluding the name field!
+  fields = '__all__'
+
+class PostDelete(DeleteView):
+  model = Post
   success_url = '/'
