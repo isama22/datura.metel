@@ -18,6 +18,14 @@
         <div class="post-box">
             <p>text</p>
         </div>
+        {% for post in posts %}
+        <a href="">
+            <div class="post-box">
+               <span>{{ post.title }}</span>
+               <p>{{ post.description }}</p>
+            </div>
+        </a>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

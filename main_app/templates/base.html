@@ -16,10 +16,16 @@
             <div class="header">
                 <div class="login">
                     <div>
-                        <p>login</p>
+                        <a href="">login</a>
                     </div>
                     <div>
-                        <p>make a post</p>
+                        <a href="{% url 'home' %}"><em>index</em></a>
+                    </div>
+                    <div>
+                        <a href="{% url 'post' %}"><em>make a post</em></a>
+                    </div>
+                    <div>
+                        <a href="{% url 'about' %}"><em>about</em></a>
                     </div>
                 </div>
             </div>
