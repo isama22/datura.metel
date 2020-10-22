@@ -5,9 +5,9 @@ html {
 }
 
 .home-background-image {
-    background-image: url(https://i.postimg.cc/HxnH7FVf/cassini-space-probe-saturn.jpg);
+    background-image: url(https://64.media.tumblr.com/7979189373c82328c3c43c8bd7013d4d/8980160978c647e4-c2/s540x810/1a7d28bb52d68a6e6e870a342d0a84c8d79fd3c4.gifv);
     background-size: cover;
-    height: 1000px;
+    height: 670px;
     width: 1430px;
 }
 
@@ -34,18 +34,18 @@ html {
 }
 .home-page {
     background-color: wheat;
-    height: 800px;
+    height: 550px;
     width: 1350px;
-    background-color: rgba(219, 197, 194, 0.69);
-    margin-top: 60px;
-}
-
-.post-box {
-    background-color: rgba(219, 230, 226, 0.76);
-    width: 150px;
-    height: 150px;
+    background-color: rgba(219, 197, 194, 0.46);
+    margin-top: 40px;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.post-box {
+    background-color: rgba(219, 230, 226, 0.4);
+    width: 150px;
+    height: 150px;
     margin: 20px;
 }
