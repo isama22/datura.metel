@@ -56,5 +56,21 @@ html {
     height: 550px;
     width: 1350px;
     background-color: rgba(219, 197, 194, 0.46);
-    margin-top: 40px;
+    margin: 40px;
+
+}
+
+.detail-post {
+    background-color: rgba(219, 230, 226, 0.4);
+    width: 1250px;
+    margin: 50px;
+}
+
+.card-title {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.card-description {
+    padding-left: 10px;
 }

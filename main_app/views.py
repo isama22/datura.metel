@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Post
-
+from django.views.generic.edit import CreateView
 # Add the following import
 # from django.http import HttpResponse
 
@@ -21,3 +21,7 @@ def about(request):
 def post(request):
   return render(request, 'post.html')  
 
+class PostCreate(CreateView):
+  model = Post
+  fields = '__all__'
+  success_url = '/'

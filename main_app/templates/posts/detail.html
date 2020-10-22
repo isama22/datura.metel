@@ -2,13 +2,17 @@
 {% block content %}
 
 <div class="card">
-  <div class="card-content">
-      <div class="detail-page">
-             <span class="card-title">{{ post.title }}</span>
-    <p>{{ post.description }}</p> 
-      </div>
+    <div class="card-content">
+        <div class="detail-page">
+            <div class="detail-post">
+                  <p class="card-title"><em>{{ post.title }}</em></p>
+                  <hr>
+            <p class="card-description">{{ post.description }}</p>
+            </div>  
+          
+        </div>
 
-  </div>
+    </div>
 </div>
 
 {% endblock %}
