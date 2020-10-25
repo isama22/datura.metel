@@ -1,11 +1,14 @@
 html {
     background-color: black;
     font-family: monospace;
-    color: blue;
+    color: #3b3a3b;
+}
+a {
+    color: #3b3a3b;
 }
 
 .home-background-image {
-    background-image: url(https://64.media.tumblr.com/7979189373c82328c3c43c8bd7013d4d/8980160978c647e4-c2/s540x810/1a7d28bb52d68a6e6e870a342d0a84c8d79fd3c4.gifv);
+    background-image: url(https://i.postimg.cc/VNdHZnQq/Screen-Shot-2020-06-18-at-4-21-39-PM.png);
     background-size: cover;
     height: 670px;
     width: 1430px;
@@ -48,7 +51,10 @@ html {
     height: 150px;
     margin: 20px;
 }
-
+.post-box:hover {
+    /* background-color: rgba(219, 230, 226, 0.6); */
+    box-shadow: 0px 0px 30px 10px rgba(239, 174, 175, 0.6);
+}
 .detail-page {
     display: flex;
     flex-direction: column;
