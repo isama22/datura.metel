@@ -3,14 +3,17 @@
 
 <div class="home-box">
     <div class="home-page">
-        {% for post in posts %}
-        <a href="{% url 'detail' post.id %}">
-            <div class="post-box">
-               <span>{{ post.title }}</span>
-               <p>{{ post.description }}</p>
-            </div>
-        </a>
-        {% endfor %}
+        <div class="grid">
+
+            {% for post in posts %}
+            <a href="{% url 'detail' post.id %}">
+                <div class="post-box">
+                   <span>{{ post.title }}</span>
+                   <p>{{ post.description }}</p>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}

@@ -5,6 +5,10 @@ html {
 }
 a {
     color: #3b3a3b;
+    text-decoration: none;
+}
+a:hover {
+    font-weight: bold;
 }
 
 .home-background-image {
@@ -41,19 +45,35 @@ a {
     background-color: rgba(219, 197, 194, 0.46);
     margin-top: 40px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
 }
-
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 19px 19px;
+    grid-template-areas:
+      ". . . ."
+      ". . . ."
+      ". . . .";
+      padding-top: 10px;
+  
+      
+}
 .post-box {
     background-color: rgba(219, 230, 226, 0.4);
     width: 150px;
     height: 150px;
-    margin: 20px;
+    /* margin: 20px; */
 }
 .post-box:hover {
     /* background-color: rgba(219, 230, 226, 0.6); */
     box-shadow: 0px 0px 30px 10px rgba(239, 174, 175, 0.6);
+    font-weight: bold;
 }
 .detail-page {
     display: flex;
@@ -68,10 +88,13 @@ a {
 
 .detail-post {
     background-color: rgba(219, 230, 226, 0.4);
+    /* background-color: rgba(239, 174, 175, 0.6); */
     width: 1250px;
     margin: 50px;
 }
-
+.detail-header {
+    /* background-color: rgba(219, 230, 226, 0.4); */
+}
 .card-title {
     font-weight: bold;
     padding-left: 10px;
@@ -79,4 +102,5 @@ a {
 
 .card-description {
     padding-left: 10px;
+    /* background-color: rgba(239, 174, 175, 0.6); */
 }
