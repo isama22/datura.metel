@@ -19,7 +19,7 @@ a:hover {
 }
 
 .header {
-    background-color: rgba(219, 197, 194, 0.69);
+    background-color: rgba(219, 197, 194, 0.9 );
     width: 1430px;
     /* display: flex;
     justify-content: space-evenly;
@@ -51,6 +51,7 @@ a:hover {
     display: flex;
     justify-content: center;
 }
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -103,4 +104,22 @@ a:hover {
 .card-description {
     padding-left: 10px;
     /* background-color: rgba(239, 174, 175, 0.6); */
+}
+
+.form-page {
+    height: 550px;
+    width: 1350px;
+    background-color: rgba(219, 197, 194, 0.46);
+    margin: 40px;
+
+
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; */
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+}
+
+.form-box {
+margin-top: 110px;
 }
