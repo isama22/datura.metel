@@ -9,7 +9,12 @@
             <a href="{% url 'detail' post.id %}">
                 <div class="post-box">
                    <span>{{ post.title }}</span>
-                   <p>{{ post.description }}</p>
+                   <!-- <p>{{ post.description }}</p> -->
+                    <p>only show first picture here. truncated post text is sneak peeked in the pop up</p>
+                   <div class="pop-up">
+                       <p>{{ post.description|truncatewords:5 }}</p>
+                   </div>
+                   
                 </div>
             </a>
             {% endfor %}
