@@ -13,11 +13,15 @@
 <body>
     <main>
         <div class="home-background-image">
-            <div class="header">
-                <div class="login">
+            <div class="header"> 
+                <div class="header-content">
+                    {% if user.is_authenticated %}
+                    <div>{{request.user.username}}</div>
+                    {% else %}
                     <div>
-                        <a href="">login</a>
+                        <a href="{% url 'login' %}">login</a>
                     </div>
+                    {% endif %}
                     <div>
                         <a href="{% url 'home' %}"><em>index</em></a>
                     </div>

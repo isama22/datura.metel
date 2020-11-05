@@ -20,13 +20,15 @@ a:hover {
 
 .header {
     background-color: rgba(219, 197, 194, 0.9 );
+    /* background-color: red; */
     width: 1430px;
     /* display: flex;
     justify-content: space-evenly;
     flex-direction: row; */
 }
 
-.login {
+.header-content {
+    /* background-color: red; */
     /* width: 60px; */
     margin-left: 20px;
     margin-right: 20px;
