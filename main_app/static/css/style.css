@@ -169,3 +169,7 @@ margin-top: 110px;
 .post {
     padding: 10px;
 }
+
+.no-post-photo {
+    color: white;
+}
