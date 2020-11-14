@@ -4,17 +4,18 @@
 <div class="card">
     <div class="card-content">
         <div class="detail-page">
-            <a href="/">back</a>
+            <div class="back-link">
+
+                <a href="/">back</a>
+                <a href="{% url 'posts_update' post.id %}">edit</a>
+                <a href="{% url 'posts_delete' post.id %}">delete</a>
+            </div>
             <div class="detail-post">
                 <div class="detail-header">
                     <p class="card-title"><em>{{ post.title }}</em></p>
                 </div>
                 <hr>
                 <p class="card-description">{{ post.description }}</p>
-            </div>
-            <div class="">
-                <a href="{% url 'posts_update' post.id %}">Edit</a>
-                <a href="{% url 'posts_delete' post.id %}">Delete</a>
             </div>
         </div>
 

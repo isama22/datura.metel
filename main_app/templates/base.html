@@ -16,20 +16,27 @@
             <div class="header"> 
                 <div class="header-content">
                     {% if user.is_authenticated %}
-                    <div>{{request.user.username}}</div>
+                    <div><span class="username">{{request.user.username}}</span></div>
+                    <div>
+                        <a href="{% url 'logout' %}">logout</a>
+                    </div>
                     {% else %}
+                    <div>
+                        <a href="{% url 'signup' %}">sign up</a>
+                    </div>
                     <div>
                         <a href="{% url 'login' %}">login</a>
                     </div>
+
                     {% endif %}
                     <div>
-                        <a href="{% url 'home' %}"><em>index</em></a>
+                        <a href="{% url 'home' %}">index</a>
                     </div>
                     <div>
-                        <a href="{% url 'posts_create' %}"><em>make a post</em></a>
+                        <a href="{% url 'posts_create' %}">make a post</a>
                     </div>
                     <div>
-                        <a href="{% url 'about' %}"><em>about</em></a>
+                        <a href="{% url 'about' %}">about</a>
                     </div>
                 </div>
             </div>

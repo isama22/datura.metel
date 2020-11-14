@@ -11,5 +11,8 @@ urlpatterns = [
     path('posts/<int:pk>/delete/', views.PostDelete.as_view(), name='posts_delete'),
 
     # auth
- 
+    path('accounts/signup/', views.signup, name='signup'),
+
+    #photo
+    path('posts/<int:post_id>/add_photo/', views.add_photo, name='add_photo'),
 ]
