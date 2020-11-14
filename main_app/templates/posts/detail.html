@@ -17,6 +17,15 @@
                 <hr>
                 <p class="card-description">{{ post.description }}</p>
             </div>
+
+        </div>
+        {% for photo in post.photo_set.all %}
+          <img class="" src="{{photo.url}}">
+        {% empty %}
+          <div class="">No Photos Uploaded</div>
+        {% endfor %}
+
+
         </div>
 
     </div>
