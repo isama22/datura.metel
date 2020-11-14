@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <p>Are you sure you want to delete <span>{{ object.title }}</span>?</p>
+  <p>Are you sure you want to delete <span>{{ object.name }}</span>?</p>
 
   <form action="" method="POST">
     {% csrf_token %}
