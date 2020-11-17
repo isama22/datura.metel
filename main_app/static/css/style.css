@@ -162,28 +162,31 @@ a:hover {
 
 .form-page {
     height: 550px;
-    width: 1350px;
+    width: 850px;
     background-color: rgba(219, 197, 194, 0.46);
-    margin: 40px;
+    margin: 40px 0px 0px 260px;
     /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr; */
     overflow: scroll;
     display: flex;
     justify-content: center;
+    background-color: rgb(157, 121, 121, 0.5);
 }
 
 .form-box {
     margin-top: 110px;
+    border: solid 1px black;
+    padding: 20px;
+    height: 280px;
 }
 
+.submit {
+    margin-top: 15px;
+}
 .back-link {
     width: 150px;
     margin-left: 50px;
     margin-top: 10px;
-}
-
-.back-link:hover {
-    font-weight: bold;
 }
 
 .post {
