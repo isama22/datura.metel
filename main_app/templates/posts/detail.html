@@ -16,7 +16,10 @@
                     <p class="by"><em>{{request.user.username}}</em></p>
                 </div>
                 <hr>
-                <p class="card-description">{{ post.description }}</p>
+                <div class="card-description">
+                    <p>{{ post.description }}</p>
+                </div>
+      
             </div>
 
             {% for photo in post.photo_set.all %}

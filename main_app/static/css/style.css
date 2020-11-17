@@ -158,6 +158,9 @@ a:hover {
 .card-description {
     padding-left: 10px;
     /* background-color: rgba(239, 174, 175, 0.6); */
+    white-space: pre-wrap;
+    overflow: scroll;
+    height: 300px;
 }
 
 .form-page {
