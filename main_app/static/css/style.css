@@ -4,7 +4,7 @@ html {
     color: #3b3a3b;
 }
 a {
-    color: #41eca9;
+    color: #3b3a3b;
     text-decoration: none;
 }
 a:hover {
@@ -17,16 +17,19 @@ a:hover {
     height: 670px;
     width: 1430px; */
     background-color: #d5cfbd;
+    height: 670px;
+    width: 1430px;  
 }
 
 .header {
     /* background-color: rgba(219, 197, 194, 0.9 ); */
-    background-color: rgba(86, 37, 16, 0.7);
+    /* background-color: rgba(86, 37, 16, 0.7); */
     /* background-color: red; */
     width: 1430px;
     /* display: flex;
     justify-content: space-evenly;
     flex-direction: row; */
+    border: solid 1px black;
 }
 
 .header-content {
@@ -41,7 +44,7 @@ a:hover {
 }
 
 .username {
-    color: cyan;
+    color: #3b3a3b;
 }
 .home-box {
     display: flex;
@@ -52,7 +55,8 @@ a:hover {
     height: 550px;
     width: 1350px;
     /* background-color: rgba(219, 197, 194, 0.46); */
-    background-color: rgb(157,121,121, 0.5);
+    /* background-color: rgb(157,121,121, 0.5); */
+    border: solid 1px black;
     margin-top: 40px;
 
     /* display: grid;
@@ -81,7 +85,10 @@ a:hover {
     width: 150px;
     height: 150px;
     /* margin: 20px; */
-    /* border: solid 1px white; */
+    border: solid 1px grey;
+    border-radius: 10px;
+    
+
 }
 .post-box:hover {
     /* background-color: rgba(219, 230, 226, 0.6); */
