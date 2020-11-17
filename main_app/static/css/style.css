@@ -12,10 +12,11 @@ a:hover {
 }
 
 .home-background-image {
-    background-image: url(https://64.media.tumblr.com/10d029609746813df52f94fbb0526a5a/8980160978c647e4-bf/s640x960/e73569339d24902396fbd319a7dc58cdf7292b67.gifv);
+    /* background-image: url(https://64.media.tumblr.com/10d029609746813df52f94fbb0526a5a/8980160978c647e4-bf/s640x960/e73569339d24902396fbd319a7dc58cdf7292b67.gifv);
     background-size: cover;
     height: 670px;
-    width: 1430px;
+    width: 1430px; */
+    background-color: #d5cfbd;
 }
 
 .header {

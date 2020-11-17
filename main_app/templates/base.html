@@ -17,6 +17,7 @@
                 <div class="header-content">
                     {% if user.is_authenticated %}
                     <div><span class="username">{{request.user.username}}</span></div>
+            
                     <div>
                         <a href="{% url 'logout' %}">logout</a>
                     </div>

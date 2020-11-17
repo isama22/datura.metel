@@ -1,11 +1,15 @@
 from django.shortcuts import render, redirect
-from .models import Post, Photo
+from .models import Post, Photo, Profile
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 # Add the following import
 # from django.http import HttpResponse
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+
+from django.utils.decorators import method_decorator
+from django.contrib.auth.decorators import login_required
+from django.views.generic.detail import SingleObjectMixin
 
 import uuid
 import boto3
@@ -85,3 +89,39 @@ def add_photo(request, post_id):
         except:
             print('An error occurred uploading file to S3')
     return redirect('detail', post_id=post_id)
+
+
+
+
+# class ProfileObjectMixin(SingleObjectMixin):
+#     """
+#     Provides views with the current user's profile.
+#     """
+#     model = Profile
+
+#     def get_object(self):
+#         """Return's the current users profile."""
+#         try:
+#             return self.request.user.get_profile()
+#         except Profile.DoesNotExist:
+#             raise NotImplemented(
+#                 "What if the user doesn't have an associated profile?")
+
+#     @method_decorator(login_required)
+#     def dispatch(self, request, *args, **kwargs):
+#         """Ensures that only authenticated users can access the view."""
+#         klass = ProfileObjectMixin
+#         return super(klass, self).dispatch(request, *args, **kwargs)
+
+
+# class ProfileUpdateView(ProfileObjectMixin, UpdateView):
+#     """
+#     A view that displays a form for editing a user's profile.
+
+#     Uses a form dynamically created for the `Profile` model and
+#     the default model's update template.
+#     """
+#     pass  # That's All Folks!
+
+# def profile(request):
+#   return render(request, 'profile.html')  

@@ -15,4 +15,7 @@ urlpatterns = [
 
     #photo
     path('posts/<int:post_id>/add_photo/', views.add_photo, name='add_photo'),
+    #profile page
+    # path('profile/', views.ProfileObjectMixin, name='profile'),
+    # path('profile/', views.profile, name='profile'),
 ]
