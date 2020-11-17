@@ -13,6 +13,7 @@
             <div class="detail-post">
                 <div class="detail-header">
                     <p class="card-title"><em>{{ post.name }}</em></p>
+                    <p class="by"><em>{{request.user.username}}</em></p>
                 </div>
                 <hr>
                 <p class="card-description">{{ post.description }}</p>
