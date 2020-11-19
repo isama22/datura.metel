@@ -201,4 +201,11 @@ a:hover {
 
 .no-post-photo {
     color: white;
+    margin-right: 20px;
+}
+
+.add-photos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

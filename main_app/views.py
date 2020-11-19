@@ -125,3 +125,14 @@ def add_photo(request, post_id):
 
 # def profile(request):
 #   return render(request, 'profile.html')  
+
+
+@login_required
+def add_comment(request, post_id):
+  form = CommentForm(request.POST)
+  if form.is_valid():
+    form.instance.user = request.user
+    new_comment = form.save(commit=False)
+    new_comment.post_id = post_id
+    new_comment.save()
+  return redirect('detail', post_id=post_id)

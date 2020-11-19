@@ -6,6 +6,7 @@ urlpatterns = [
     path('about/', views.about, name="about"),
     path('post/', views.post, name="post"),
     path('posts/<int:post_id>/', views.posts_detail, name='detail'),
+
     path('posts/create/', views.PostCreate.as_view(), name="posts_create"),
     path('posts/<int:pk>/update/', views.PostUpdate.as_view(), name='posts_update'),
     path('posts/<int:pk>/delete/', views.PostDelete.as_view(), name='posts_delete'),
@@ -18,4 +19,7 @@ urlpatterns = [
     #profile page
     # path('profile/', views.ProfileObjectMixin, name='profile'),
     # path('profile/', views.profile, name='profile'),
+
+    #commenting
+    path('posts/<int:post_id>/add_comment/', views.add_comment, name='add_comment'),
 ]
