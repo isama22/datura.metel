@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post, Photo, Profile
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .forms import CommentForm
 # Add the following import
 # from django.http import HttpResponse
 from django.contrib.auth import login
