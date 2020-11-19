@@ -76,6 +76,7 @@ a:hover {
     gap: 19px 19px;
     grid-template-areas: ". . . ." ". . . ." ". . . .";
     padding-top: 10px;
+    margin-left: 12px;
 }
 
 .post-box {
@@ -155,6 +156,7 @@ a:hover {
 .by {
     margin-left: 50px;
 }
+
 .card-description {
     padding-left: 10px;
     /* background-color: rgba(239, 174, 175, 0.6); */
@@ -186,6 +188,7 @@ a:hover {
 .submit {
     margin-top: 15px;
 }
+
 .back-link {
     width: 150px;
     margin-left: 50px;
