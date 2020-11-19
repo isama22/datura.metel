@@ -28,7 +28,9 @@ def home(request):
 
 def posts_detail(request, post_id):
   post = Post.objects.get(id=post_id)
-  return render(request, 'posts/detail.html', { 'post': post })
+  # return render(request, 'posts/detail.html', { 'post': post })
+  comment_form = CommentForm()
+  return render(request, 'posts/detail.html', { 'post': post, 'comment_form': comment_form })
 
 def about(request):
   return render(request, 'about.html')  
