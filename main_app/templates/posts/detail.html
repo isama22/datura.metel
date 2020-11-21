@@ -19,7 +19,7 @@
                 <div class="card-description">
                     <p>{{ post.description }}</p>
                 </div>
-      
+
             </div>
 
             <div class="add-photos">
@@ -28,39 +28,43 @@
                 {% empty %}
                 <div class="no-post-photo">No Photos Uploaded</div>
                 {% endfor %}
-         
 
-            <!-- new code below -->
-            <form action="{% url 'add_photo' post.id %}" enctype="multipart/form-data" method="POST" class="add-photos">
-                {% csrf_token %}
-                <input type="file" name="photo-file">
-                <br><br>
-                <input type="submit" class="btn" value="Upload Photo">
-            </form>
-               </div>
 
-               <table>
-                <thead>
-                  <tr>Comments:</tr>
-                </thead>
-                <tbody>
-                  {% for comment in post.comment_set.all %}
-                  <tr>
-                    <td><em>{{request.user.username}}:</em> {{comment.text}}</td>
-                  </tr>
-                  {% empty %}
-                  <p>No comments yet!</p>
-                  {% endfor %}
-                </tbody>
-              </table>
+                <!-- new code below -->
+                <form action="{% url 'add_photo' post.id %}" enctype="multipart/form-data" method="POST"
+                    class="add-photos">
+                    {% csrf_token %}
+                    <input type="file" name="photo-file">
+                    <br><br>
+                    <input type="submit" class="btn" value="Upload Photo">
+                </form>
+            </div>
 
-              <form action="{% url 'add_comment' post.id %}" method="post">
-                {% csrf_token %}
-                {{ comment_form.as_p }}
-                <input type="submit" class="btn" value="Add Comment">
-              </form>
-
+            
         </div>
+                <div class="comment-box">
+    
+                    <table>
+                        <thead>
+                            <tr>Comments:</tr>
+                        </thead>
+                        <tbody>
+                            {% for comment in post.comment_set.all %}
+                            <tr>
+                                <td><em>{{request.user.username}}:</em> {{comment.text}}</td>
+                            </tr>
+                            {% empty %}
+                            <p>No comments yet!</p>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+        
+                    <form action="{% url 'add_comment' post.id %}" method="post">
+                        {% csrf_token %}
+                        {{ comment_form.as_p }}
+                        <input type="submit" class="btn" value="Add Comment">
+                    </form>
+                </div>
 
 
     </div>
