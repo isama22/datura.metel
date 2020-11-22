@@ -134,7 +134,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     height: 550px;
-    width: 1050px;
+    width: 950px;
     /* background-color: rgba(219, 197, 194, 0.46); */
     background-color: rgb(157, 121, 121, 0.5);
     margin: 40px;
@@ -143,7 +143,7 @@ a:hover {
 .detail-post {
     background-color: rgba(219, 230, 226, 0.4);
     /* background-color: rgba(239, 174, 175, 0.6); */
-    width: 950px;
+    width: 750px;
     margin: 50px;
 }
 
@@ -219,8 +219,14 @@ a:hover {
     border: solid red 2px;
 }
 
-.comment-form {
+.comment-form-box {
     width: 100px;
     height: 30px;
+    border: solid 2px black;
+}
+.comment-form {
+    /* width: 100px;
+    height: 30px; */
     background-color: red;
+    
 }
