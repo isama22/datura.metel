@@ -59,11 +59,14 @@
                         </tbody>
                     </table>
         
-                    <form action="{% url 'add_comment' post.id %}" method="post">
-                        {% csrf_token %}
-                        {{ comment_form.as_p }}
-                        <input type="submit" class="btn" value="Add Comment">
-                    </form>
+                    <div >
+
+                        <form action="{% url 'add_comment' post.id %}" method="post" class="comment-form">
+                            {% csrf_token %}
+                            {{ comment_form.as_p }}
+                            <input type="submit" class="btn" value="Add Comment">
+                        </form>
+                    </div>
                 </div>
 
 

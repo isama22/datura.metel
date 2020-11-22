@@ -216,5 +216,11 @@ a:hover {
 }
 
 .comment-box {
-    border-width: solid red 2px;
+    border: solid red 2px;
+}
+
+.comment-form {
+    width: 100px;
+    height: 30px;
+    background-color: red;
 }
