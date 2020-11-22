@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post, Photo, Profile
+from .models import Post, Photo
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import CommentForm
 # Add the following import
