@@ -51,7 +51,7 @@
                         <tbody>
                             {% for comment in post.comment_set.all %}
                             <tr>
-                                <td><em>{{request.user.username}}:</em> {{comment.text}}</td>
+                                <td><em>username:</em> {{comment.text}}</td>
                             </tr>
                             {% empty %}
                             <p>No comments yet!</p>
