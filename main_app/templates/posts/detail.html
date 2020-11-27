@@ -18,16 +18,21 @@
                 <hr>
                 <div class="card-description">
                     <p>{{ post.description }}</p>
+                    {% for photo in post.photo_set.all %}
+                    <img class="post-photo" src="{{photo.url}}">
+                    {% empty %}
+                    <div class="no-post-photo">No Photos Uploaded</div>
+                    {% endfor %}
                 </div>
 
             </div>
 
             <div class="add-photos">
-                {% for photo in post.photo_set.all %}
+                <!-- {% for photo in post.photo_set.all %}
                 <img class="post-photo" src="{{photo.url}}">
                 {% empty %}
                 <div class="no-post-photo">No Photos Uploaded</div>
-                {% endfor %}
+                {% endfor %} -->
 
 
                 <!-- new code below -->
