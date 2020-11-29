@@ -48,6 +48,9 @@ a:hover {
     color: #3b3a3b;
 }
 
+.logout {
+    color: darkgreen;
+}
 .home-box {
     display: flex;
     justify-content: center;

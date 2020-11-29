@@ -13,14 +13,17 @@
 <body>
     <main>
         <div class="home-background-image">
-            <div class="header"> 
+            <div class="header">
                 <div class="header-content">
                     {% if user.is_authenticated %}
-                    <div><span class="username">hey, {{request.user.username}}</span></div>
-            
                     <div>
-                        <a href="{% url 'logout' %}">logout</a>
+                        <span class="username">hey, {{request.user.username}} |</span>
+                        <em><a href="{% url 'logout' %}" class="logout">&nbsp;logout</a></em>
                     </div>
+
+                    <!-- <div>
+                        <a href="{% url 'logout' %}">logout</a>
+                    </div> -->
                     {% else %}
                     <div>
                         <a href="{% url 'signup' %}">sign up</a>
