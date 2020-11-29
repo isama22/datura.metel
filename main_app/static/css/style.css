@@ -24,7 +24,6 @@ a:hover {
 }
 
 .header {
-    background-color: rgba(219, 197, 194, 0.9 );
     /* background-color: rgba(86, 37, 16, 0.7); */
     /* background-color: red; */
     width: 1430px;
@@ -140,12 +139,13 @@ a:hover {
     height: 550px;
     width: 950px;
     /* background-color: rgba(219, 197, 194, 0.46); */
-    background-color: rgb(157, 121, 121, 0.5);
+    /* background-color: rgb(157, 121, 121, 0.5); */
+    background-color: rgba(219, 230, 226, 0.4);
     margin: 40px;
 }
 
 .detail-post {
-    background-color: rgba(219, 230, 226, 0.4);
+    background-color: rgba(230, 229, 219, 0.68);
     /* background-color: rgba(239, 174, 175, 0.6); */
     width: 750px;
     margin: 50px;
