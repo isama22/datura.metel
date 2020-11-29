@@ -14,16 +14,26 @@
     <main>
         <div class="home-background-image">
             <div class="header">
+                {% if user.is_authenticated %}
+                <div>
+                    <span class="username">hey, {{request.user.username}} |</span>
+                    <em><a href="{% url 'logout' %}" class="logout">&nbsp;logout</a></em>
+                </div>
+                {% else %}
+                <div>
+                    <a href="{% url 'signup' %}">sign up</a>
+                </div>
+                <div>
+                    <a href="{% url 'login' %}">login</a>
+                </div>
+
+                {% endif %}
                 <div class="header-content">
-                    {% if user.is_authenticated %}
+                    <!-- {% if user.is_authenticated %}
                     <div>
                         <span class="username">hey, {{request.user.username}} |</span>
                         <em><a href="{% url 'logout' %}" class="logout">&nbsp;logout</a></em>
                     </div>
-
-                    <!-- <div>
-                        <a href="{% url 'logout' %}">logout</a>
-                    </div> -->
                     {% else %}
                     <div>
                         <a href="{% url 'signup' %}">sign up</a>
@@ -32,7 +42,7 @@
                         <a href="{% url 'login' %}">login</a>
                     </div>
 
-                    {% endif %}
+                    {% endif %} -->
                     <div>
                         <a href="{% url 'home' %}">index</a>
                     </div>
