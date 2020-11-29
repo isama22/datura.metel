@@ -15,8 +15,8 @@
                     <p class="by"><em>{{request.user.username}}</em></p>
                 </div>
                 <hr>
-                <div class="card-description">
-                    <p>{{ post.description }}</p>
+                <div class="post-description-div">
+                    <p class="post-description">{{ post.description }}</p>
                     {% for photo in post.photo_set.all %}
                     <img class="post-photo" src="{{photo.url}}">
                     {% empty %}
