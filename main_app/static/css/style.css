@@ -136,7 +136,7 @@ a:hover {
 .detail-page {
     display: flex;
     flex-direction: column;
-    height: 550px;
+    height: 560px;
     width: 950px;
     /* background-color: rgba(219, 197, 194, 0.46); */
     /* background-color: rgb(157, 121, 121, 0.5); */
@@ -145,10 +145,12 @@ a:hover {
 }
 
 .detail-post {
-    background-color: rgba(230, 229, 219, 0.68);
+    background-color: rgba(228, 225, 196, 0.74);
     /* background-color: rgba(239, 174, 175, 0.6); */
-    width: 750px;
-    margin: 50px;
+    width: 850px;
+    height: 450px;
+    margin: 20px 0px 0px 50px;
+    overflow: scroll;
 }
 
 .detail-header {
@@ -169,13 +171,14 @@ a:hover {
 .post-description-div {
     padding: 0px 10px 0px 10px;
     white-space: pre-wrap;
-    overflow: scroll;
+    /* overflow: scroll; */
     height: 300px;
 }
 
 .post-description {
     padding: 0px;
     margin: 0px;
+    height: 450px;
 }
 
 .form-page {
@@ -221,6 +224,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .comment-box {
