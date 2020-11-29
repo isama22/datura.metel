@@ -12,13 +12,23 @@
 
                         <span>{{ post.name }}</span>
                         <!-- <p>{{ post.description }}</p> -->
-                         <!-- <p>only show first picture here. truncated post text is sneak peeked in the pop up</p> -->
-                         <div class="post-icon"></div>
+                        <!-- <p>only show first picture here. truncated post text is sneak peeked in the pop up</p> -->
+                        <div class="post-icon">
+                            {% for photo in post.photo_set.all %}
+                            {% if forloop.first %}
+                            <img class="" src="{{photo.url}}">
+                            {% endif %}
+                            {%empty%}
+                            <p>image</p>
+                            {% endfor %}
+
+                        </div>
+
                         <div class="pop-up">
                             <p>{{ post.description|truncatewords:5 }}</p>
                         </div>
                     </div>
-                   
+
                 </div>
             </a>
             {% endfor %}
