@@ -16,7 +16,7 @@ import uuid
 import boto3
 
 S3_BASE_URL = 'hhtps://s3-us-west-1.amazonaws.com/'
-BUCKET =  'poe-app'
+BUCKET =  'datura.metel'
 
 
 # Define the home view
