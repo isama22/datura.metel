@@ -171,13 +171,12 @@ a:hover {
 .post-description-div {
     padding: 0px 10px 0px 10px;
     white-space: pre-wrap;
-    /* overflow: scroll; */
     height: 300px;
 }
 
 .post-description {
     padding: 0px;
-    margin: 0px;
+    margin-left: 20px;
     height: 450px;
 }
 
@@ -216,7 +215,7 @@ a:hover {
 }
 
 .no-post-photo {
-    color: white;
+    color: black;
     margin-right: 20px;
 }
 
