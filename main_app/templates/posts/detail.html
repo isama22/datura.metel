@@ -15,7 +15,7 @@
                     <p class="by"><em>{{request.user.username}}</em></p>
                 </div>
                 <hr>
-                <div class="post-description-div">
+                <!-- <div class="post-description-div"> -->
                     <div class="post-description">
                         <p>{{ post.description }}</p>
 
@@ -25,7 +25,7 @@
                         <div class="no-post-photo">No Photos Uploaded</div>
                         {% endfor %}
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             <div class="add-photos">
                 <form action="{% url 'add_photo' post.id %}" enctype="multipart/form-data" method="POST"
