@@ -34,29 +34,6 @@
                 </form>
             </div>
         </div>
-        <div class="comment-box">
-            <!-- <table>
-                <thead>
-                    <tr>Comments: {{ post.comments.count }}</tr>
-                </thead>
-                <tbody>
-                    {% for comment in post.comment_set.all %}
-                    <tr>
-                        <td><em>{{comment.user}}:</em> {{comment.text|linebreaks}} | {{ comment.created_date }}</td>
-                    </tr>
-                    {% empty %}
-                    <p>No comments yet!</p>
-                    {% endfor %}
-                </tbody>
-            </table>
-            <div class="comment-form-box">
-                <form action="{% url 'add_comment' post.id %}" method="post" class="comment-form">
-                    {% csrf_token %}
-                    {{ comment_form.as_p }}
-                    <input type="submit" class="btn" value="Add Comment">
-                </form>
-            </div> -->
-        </div>
     </div>
 </div>
 </div>

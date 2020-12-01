@@ -28,9 +28,9 @@ def home(request):
 
 def posts_detail(request, post_id):
   post = Post.objects.get(id=post_id)
-  # return render(request, 'posts/detail.html', { 'post': post })
-  comment_form = CommentForm()
-  return render(request, 'posts/detail.html', { 'post': post, 'comment_form': comment_form })
+  return render(request, 'posts/detail.html', { 'post': post })
+  # comment_form = CommentForm()
+  # return render(request, 'posts/detail.html', { 'post': post, 'comment_form': comment_form })
 
 @login_required
 def add_comment(request, post_id):
