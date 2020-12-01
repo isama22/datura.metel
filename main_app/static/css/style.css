@@ -174,18 +174,11 @@ a:hover {
     margin-left: 50px;
 }
 
-.post-description-div {
-    padding: 0px 0px 0px 0px;
-    white-space: pre-wrap;
-    /* height: 300px; */
-    background-color: darkkhaki;
-}
 
 .post-description {
     padding: 0px;
     margin-left: 20px;
     /* height: 450px; */
-    background-color: darkgreen;
     white-space: pre-wrap;
 }
 

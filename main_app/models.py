@@ -4,6 +4,7 @@ from datetime import date
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.utils import timezone
 
 # Create your models here.
 class Post(models.Model):
@@ -18,9 +19,10 @@ class Post(models.Model):
         return reverse('detail', kwargs={'post_id': self.id})
 
 class Comment(models.Model):
-  user = models.ForeignKey(User, on_delete=models.CASCADE)
+  user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
   post = models.ForeignKey(Post, on_delete=models.CASCADE)
   text = models.CharField(max_length=100)
+  created_date = models.DateTimeField(default=timezone.now)
 
   def __str__(self):
     return self.text
