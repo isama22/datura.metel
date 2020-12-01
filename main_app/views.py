@@ -15,8 +15,8 @@ from django.views.generic.detail import SingleObjectMixin
 import uuid
 import boto3
 
-S3_BASE_URL = 'hhtps://s3-us-west-1.amazonaws.com/'
-BUCKET =  'datura.metel'
+S3_BASE_URL = 'https://s3-us-west-1.amazonaws.com/'
+BUCKET = 'datura.metel'
 
 
 # Define the home view
