@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post, Photo
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .forms import CommentForm
+# from .forms import CommentForm
 # Add the following import
 # from django.http import HttpResponse
 from django.contrib.auth import login
@@ -140,12 +140,12 @@ def add_photo(request, post_id):
 #   return render(request, 'profile.html')  
 
 
-@login_required
-def add_comment(request, post_id):
-  form = CommentForm(request.POST)
-  if form.is_valid():
-    form.instance.user = request.user
-    new_comment = form.save(commit=False)
-    new_comment.post_id = post_id
-    new_comment.save()
-  return redirect('detail', post_id=post_id)
+# @login_required
+# def add_comment(request, post_id):
+#   form = CommentForm(request.POST)
+#   if form.is_valid():
+#     form.instance.user = request.user
+#     new_comment = form.save(commit=False)
+#     new_comment.post_id = post_id
+#     new_comment.save()
+#   return redirect('detail', post_id=post_id)

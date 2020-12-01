@@ -18,17 +18,17 @@ class Post(models.Model):
     def get_absolute_url(self):
         return reverse('detail', kwargs={'post_id': self.id})
 
-class Comment(models.Model):
-  user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
-  post = models.ForeignKey(Post, on_delete=models.CASCADE)
-  text = models.CharField(max_length=100)
-  created_date = models.DateTimeField(default=timezone.now)
+# class Comment(models.Model):
+#   user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+#   post = models.ForeignKey(Post, on_delete=models.CASCADE)
+#   text = models.CharField(max_length=100)
+#   created_date = models.DateTimeField(default=timezone.now)
 
-  def __str__(self):
-    return self.text
+#   def __str__(self):
+#     return self.text
 
-  def get_absolute_url(self):
-    return reverse('detail', kwargs={'post_id': self.id}) 
+#   def get_absolute_url(self):
+#     return reverse('detail', kwargs={'post_id': self.id}) 
 
 
 class Photo(models.Model):
@@ -37,17 +37,3 @@ class Photo(models.Model):
 
     def __str__(self):
         return f"Photo for post_id: {self.post_id} @{self.url}"        
-
-# class Profile(models.Model):
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     bio = models.TextField(max_length=50, blank=True)
-#     birth_date = models.DateField(null=True, blank=True)    
-
-# @receiver(post_save, sender=User)
-# def create_user_profile(sender, instance, created, **kwargs):
-#     if created:
-#         Profile.objects.create(user=instance)
-
-# @receiver(post_save, sender=User)
-# def save_user_profile(sender, instance, **kwargs):
-#     instance.profile.save()                

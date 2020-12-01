@@ -20,6 +20,6 @@ urlpatterns = [
     # path('profile/', views.ProfileObjectMixin, name='profile'),
     # path('profile/', views.profile, name='profile'),
 
-    #commenting
-    path('posts/<int:post_id>/add_comment/', views.add_comment, name='add_comment'),
+    # #commenting
+    # path('posts/<int:post_id>/add_comment/', views.add_comment, name='add_comment'),
 ]
