@@ -4,6 +4,10 @@ html {
     color: #3b3a3b;
 }
 
+*:focus {
+    outline: none;
+}
+
 a {
     color: #3b3a3b;
     text-decoration: none;
