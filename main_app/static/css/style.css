@@ -18,17 +18,15 @@ a:hover {
 }
 
 .home-background-image {
-    /* background-image: url(https://64.media.tumblr.com/10d029609746813df52f94fbb0526a5a/8980160978c647e4-bf/s640x960/e73569339d24902396fbd319a7dc58cdf7292b67.gifv);
+    background-image: url(https://i.postimg.cc/KjmrZbXb/Screen-Shot-2020-12-01-at-11-33-52-PM.png);
     background-size: cover;
-    height: 670px;
-    width: 1430px; */
     background-color: #d5cfbd;
     height: 670px;
     width: 1430px;
 }
 
 .header {
-    /* background-color: rgba(86, 37, 16, 0.7); */
+    background-color: rgb(230,221,201, 0.5);
     /* background-color: red; */
     width: 1430px;
     /* display: flex;
@@ -74,6 +72,7 @@ a:hover {
     display: flex;
     justify-content: center;
     /* border: solid 1px #d5cfbd; */
+    background-color: rgb(230,221,201, 0.20);
 }
 
 .grid {
@@ -134,6 +133,10 @@ a:hover {
 
 .post-box:hover .pop-up {
     visibility: visible;
+}
+
+.pop-up-text {
+    word-wrap: break-word;
 }
 
 .card-content {
