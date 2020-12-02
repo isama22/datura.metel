@@ -115,6 +115,13 @@ a:hover {
 .home-img {
     height: 130px;
     width: 130px;
+    overflow: scroll;
+}
+
+.home-img-size {
+    /* height: 130px;
+    width: 130px; */
+    /* overflow: hidden; */
 }
 .pop-up {
     visibility: hidden;

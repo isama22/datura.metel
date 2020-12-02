@@ -16,7 +16,10 @@
                         <div class="post-icon">
                             {% for photo in post.photo_set.all %}
                             {% if forloop.first %}
-                            <img class="home-img" src="{{photo.url}}">
+                            <div class="home-img">
+                                <img class="home-img-size" src="{{photo.url}}">
+                            </div>
+
                             {% endif %}
                             {%empty%}
                             <span>{{ post.description|truncatewords:5 }}</span>
