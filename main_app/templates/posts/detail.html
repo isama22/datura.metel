@@ -11,18 +11,25 @@
             </div>
             <div class="detail-post">
                 <div class="detail-header">
-                    <p class="card-title"><em>{{ post.title }}</em></p>
-                    <p class="by"><em>{{request.user.username}}</em></p>
-                </div>
-                <hr>
-                    <div class="post-description">
-                        <p>{{ post.description }}</p>
-                        {% for photo in post.photo_set.all %}
-                        <img class="post-photo" src="{{photo.url}}">
-                        {% empty %}
-                        <div class="no-post-photo">No Photos Uploaded</div>
-                        {% endfor %}
+                    <div class="card-title">
+                        <p class="post-title"><em>{{ post.title }}</em></p>
                     </div>
+                    <div class="by">
+                        <p class="post-header-info-break"><em>by:</em> {{post.user}}</p>
+                    </div>
+                    <div class="date">
+                        <p class="post-header-info-break">{{post.date}}</p>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="post-description">
+                    <p>{{ post.description }}</p>
+                    {% for photo in post.photo_set.all %}
+                    <img class="post-photo" src="{{photo.url}}">
+                    {% empty %}
+                    <div class="no-post-photo">No Photos Uploaded</div>
+                    {% endfor %}
+                </div>
             </div>
             <div class="add-photos">
                 <form action="{% url 'add_photo' post.id %}" enctype="multipart/form-data" method="POST"
