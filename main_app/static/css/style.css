@@ -220,6 +220,10 @@ a:hover {
     padding: 10px;
 }
 
+.post-photo {
+    width: 650px;
+}
+
 .no-post-photo {
     color: black;
     margin-right: 20px;
