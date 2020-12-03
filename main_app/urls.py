@@ -16,11 +16,11 @@ urlpatterns = [
 
     #photo
     path('posts/<int:post_id>/add_photo/', views.add_photo, name='add_photo'),
-    
+
     #profile page
     # path('profile/', views.ProfileObjectMixin, name='profile'),
     # path('profile/', views.profile, name='profile'),
 
     # #commenting
-    # path('posts/<int:post_id>/add_comment/', views.add_comment, name='add_comment'),
+    path('posts/<int:post_id>/add_comment/', views.add_comment, name='add_comment'),
 ]

@@ -7,6 +7,7 @@
 
             {% for post in posts %}
             <a href="{% url 'detail' post.id %}">
+                cooments: {{post.comments.count}}
                 <div class="post-box">
                     <div class="post">
 
