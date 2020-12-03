@@ -65,9 +65,9 @@
                   <tr>Comments:</tr>
                 </thead>
                 <tbody >
-                  {% for comment in poem.comment_set.all %}
+                  {% for comment in post.comment_set.all %}
                   <tr>
-                    <td >{{request.user.username}}: <br>
+                    <td >{{comment.user}}: <br>
                       {{comment.text}}</td>
                   </tr>
                   {% empty %}
@@ -75,7 +75,7 @@
                   {% endfor %}
                 </tbody>
               </table>
-              <form action="{% url 'add_comment' poem.id %}" method="post">
+              <form action="{% url 'add_comment' post.id %}" method="post">
                 {% csrf_token %}
                 {{ comment_form.as_p }}
                 <input type="submit" class="btn" value="Add Comment">

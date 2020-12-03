@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Post, Photo
+from .models import Post, Photo, Comment
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import CommentForm
 # Add the following import
@@ -28,9 +28,9 @@ def home(request):
 
 def posts_detail(request, post_id):
   post = Post.objects.get(id=post_id)
-  return render(request, 'posts/detail.html', { 'post': post })
-  # comment_form = CommentForm()
-  # return render(request, 'posts/detail.html', { 'post': post, 'comment_form': comment_form })
+  # return render(request, 'posts/detail.html', { 'post': post })
+  comment_form = CommentForm()
+  return render(request, 'posts/detail.html', { 'post': post, 'comment_form': comment_form })
 
 @login_required
 def add_comment(request, post_id):
@@ -140,15 +140,15 @@ def add_photo(request, post_id):
 #   return render(request, 'profile.html')  
 
 
-@login_required
-def add_comment(request, post_id):
-  form = CommentForm(request.POST)
-  if form.is_valid():
-    form.instance.user = request.user
-    new_comment = form.save(commit=False)
-    new_comment.post_id = post_id
-    new_comment.save()
-  return redirect('detail', post_id=post_id)
+# @login_required
+# def add_comment(request, post_id):
+#   form = CommentForm(request.POST)
+#   if form.is_valid():
+#     form.instance.user = request.user
+#     new_comment = form.save(commit=False)
+#     new_comment.post_id = post_id
+#     new_comment.save()
+#   return redirect('detail', post_id=post_id)
 
 # def add_comment(request, pk):
 #     post = get_object_or_404(Post, pk=pk)
