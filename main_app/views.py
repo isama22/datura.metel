@@ -42,6 +42,11 @@ def add_comment(request, post_id):
     new_comment.save()
   return redirect('detail', post_id=post_id)
 
+class CommentDelete(LoginRequiredMixin, DeleteView):
+    model = Comment
+    success_url = '/'  
+
+
 def about(request):
   return render(request, 'about.html')  
 

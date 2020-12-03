@@ -45,7 +45,7 @@
             <!-- {% for comment in post.comments.all %}
             <div class="comment">
                 <div class="date">{{ comment.created_date }}</div>
-                <strong>{{ comment.author }}</strong>
+                <strong>{{ comment.user }}</strong>
                 <p>{{ comment.text|linebreaks }}</p>
             </div>
             {% empty %}
@@ -62,24 +62,33 @@
             </div> -->
             <table class="Comments">
                 <thead>
-                  <tr>Comments:</tr>
+                    <tr>Comments:</tr>
                 </thead>
-                <tbody >
-                  {% for comment in post.comment_set.all %}
-                  <tr>
-                    <td >{{comment.user}}: <br>
-                      {{comment.text}}</td>
-                  </tr>
-                  {% empty %}
-                  <p>No comments yet!</p>
-                  {% endfor %}
+                <tbody>
+                    {% for comment in post.comment_set.all %}
+                    <tr>
+                        <td><em>{{comment.user}}:</em> {{comment.text}}</td>
+
+                        {% if user == comment.user %}
+                        <td class=''><a href="{% url 'delete_comment' comment.id %}">x</a></td>
+                        {% else %}
+                        <td></td>
+                        {% endif %}
+
+                    </tr>
+                    {% empty %}
+                    <p>No comments yet!</p>
+                    {% endfor %}
                 </tbody>
-              </table>
-              <form action="{% url 'add_comment' post.id %}" method="post">
-                {% csrf_token %}
-                {{ comment_form.as_p }}
-                <input type="submit" class="btn" value="Add Comment">
-              </form>
+            </table>
+
+            <div class="comment-form-box">
+                <form class="comment-form" action="{% url 'add_comment' post.id %}" method="post">
+                    {% csrf_token %}
+                    {{ comment_form.as_p }}
+                    <input type="submit" class="btn" value="Add Comment">
+                </form>
+            </div>
         </div>
     </div>
 </div>

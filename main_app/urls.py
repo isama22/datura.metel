@@ -23,4 +23,6 @@ urlpatterns = [
 
     # #commenting
     path('posts/<int:post_id>/add_comment/', views.add_comment, name='add_comment'),
+    # path('posts/comment/<int:post_id>/delete/', views.CommentDelete.as_view(), name='delete_comment'),
+    path('posts/comment/<int:pk>/delete/', views.CommentDelete.as_view(), name='delete_comment'),
 ]
