@@ -119,10 +119,9 @@ a:hover {
 }
 
 .home-img-size {
-    /* height: 130px;
-    width: 130px; */
-    /* overflow: hidden; */
+
 }
+
 .pop-up {
     visibility: hidden;
     width: 120px;
@@ -131,7 +130,6 @@ a:hover {
     color: #fff;
     text-align: justify;
     padding: 10px;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     margin-left: 70px;
@@ -156,8 +154,6 @@ a:hover {
     flex-direction: column;
     height: 560px;
     width: 950px;
-    /* background-color: rgba(219, 197, 194, 0.46); */
-    /* background-color: rgb(157, 121, 121, 0.5); */
     background-color: rgba(219, 230, 226, 0.4);
     box-shadow: 0px 0px 30px 9px rgba(0,0,0,0.05);
     margin: 40px;
@@ -166,7 +162,6 @@ a:hover {
 .detail-post {
     background-color: rgba(228, 225, 196, 0.74);
     box-shadow: 0px 0px 30px 9px rgba(0,0,0,0.05);
-    /* background-color: rgba(239, 174, 175, 0.6); */
     width: 850px;
     height: 450px;
     margin: 20px 0px 0px 50px;
@@ -174,7 +169,6 @@ a:hover {
 }
 
 .detail-header {
-    /* background-color: rgba(219, 230, 226, 0.4); */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -262,6 +256,12 @@ a:hover {
     flex-direction: row;
     justify-content: center;
     margin-top: 10px;
+    margin-left: 50px;
+    /* padding: 5px; */
+    background-color: red;
+    width: 850px;
+    background-color: rgba(228, 225, 196, 0.74);
+    box-shadow: 0px 0px 30px 9px rgba(0,0,0,0.05);
 }
 
 .comment-box {
