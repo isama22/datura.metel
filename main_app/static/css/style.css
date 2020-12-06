@@ -272,6 +272,7 @@ a:hover {
     border-bottom: black solid 1px;
     /* background-color: rgba(193, 184, 169, 1); */
     background-color: rgba(191, 181, 166, 0.52);
+    background-color: rgba(228, 225, 196, 0.74);
     width: 350px;
     padding: 10px;
 }
@@ -286,6 +287,8 @@ a:hover {
 }
 .comment-container  {
     background-color: rgba(159, 145, 122);
+    background-color: rgba(180, 169, 151);
+    padding: 10px;
 }
 .comment-form-box {
     /* width: 300px;
