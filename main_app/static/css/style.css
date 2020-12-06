@@ -142,8 +142,12 @@ a:hover {
 
 .pop-up-text {
     word-wrap: break-word;
+    margin-top: 20px;
 }
-
+.mini-text {
+    font-size: 9px;
+    color: grey;
+}
 .card-content {
     display: flex;
     flex-direction: row;
@@ -262,6 +266,17 @@ a:hover {
     width: 850px;
     background-color: rgba(228, 225, 196, 0.74);
     box-shadow: 0px 0px 30px 9px rgba(0,0,0,0.05);
+}
+
+.comments {
+    /* width: 350px;
+    height: 530px;
+    margin: 40px 0px 0px 0px; */
+    /* border: solid 2px black; */
+    /* background-color: rgba(159, 145, 122, 0.5);
+    background-color: grey; */
+    /* padding: 10px; */
+    border-bottom: black solid 1px;
 }
 
 .comment-box {

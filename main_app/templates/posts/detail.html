@@ -60,17 +60,17 @@
                       </form>
                 </div>
             </div> -->
-            <table class="Comments">
+            <table>
                 <thead>
                     <tr>Comments:</tr>
                 </thead>
                 <tbody>
                     {% for comment in post.comment_set.all %}
                     <tr>
-                        <td><em>{{comment.user}}:</em> {{comment.text}}</td>
+                        <td class="comments"><em>{{comment.user}}:</em> {{comment.text}}</td>
 
                         {% if user == comment.user %}
-                        <td class=''><a href="{% url 'delete_comment' comment.id %}">x</a></td>
+                        <td class="comments"><a href="{% url 'delete_comment' comment.id %}">x</a></td>
                         {% else %}
                         <td></td>
                         {% endif %}
