@@ -277,6 +277,7 @@ a:hover {
     background-color: grey; */
     /* padding: 10px; */
     border-bottom: black solid 1px;
+    background-color: rgba(193, 184, 169, 1);
 }
 
 .comment-box {
