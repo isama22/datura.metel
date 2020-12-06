@@ -269,15 +269,11 @@ a:hover {
 }
 
 .comment {
-    /* width: 350px;
-    height: 530px;
-    margin: 40px 0px 0px 0px; */
-    /* border: solid 2px black; */
-    /* background-color: rgba(159, 145, 122, 0.5);
-    background-color: grey; */
-    /* padding: 10px; */
     border-bottom: black solid 1px;
-    background-color: rgba(193, 184, 169, 1);
+    /* background-color: rgba(193, 184, 169, 1); */
+    background-color: rgba(191, 181, 166, 0.52);
+    width: 350px;
+    padding: 10px;
 }
 
 .comment-box {
