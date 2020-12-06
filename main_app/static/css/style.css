@@ -268,7 +268,7 @@ a:hover {
     box-shadow: 0px 0px 30px 9px rgba(0,0,0,0.05);
 }
 
-.comments {
+.comment {
     /* width: 350px;
     height: 530px;
     margin: 40px 0px 0px 0px; */
@@ -288,7 +288,9 @@ a:hover {
     background-color: rgba(159, 145, 122, 0.5);
     padding: 10px;
 }
-
+.comment-container  {
+    background-color: rgba(159, 145, 122);
+}
 .comment-form-box {
     /* width: 300px;
     height: 400px;

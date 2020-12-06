@@ -60,27 +60,30 @@
                       </form>
                 </div>
             </div> -->
-            <table>
-                <thead>
-                    <tr>Comments:</tr>
-                </thead>
-                <tbody>
-                    {% for comment in post.comment_set.all %}
-                    <tr>
-                        <td class="comments"><em>{{comment.user}}:</em> {{comment.text}}</td>
+<div class="comment-container">
 
-                        {% if user == comment.user %}
-                        <td class="comments"><a href="{% url 'delete_comment' comment.id %}">x</a></td>
-                        {% else %}
-                        <td></td>
-                        {% endif %}
+    <table>
+        <thead>
+            <tr>Comments:</tr>
+        </thead>
+        <tbody >
+            {% for comment in post.comment_set.all %}
+            <tr>
+                <td class="comment"><em>{{comment.user}}:</em> {{comment.text}}</td>
 
-                    </tr>
-                    {% empty %}
-                    <p>No comments yet!</p>
-                    {% endfor %}
-                </tbody>
-            </table>
+                {% if user == comment.user %}
+                <td class="comment"><a href="{% url 'delete_comment' comment.id %}">x</a></td>
+                {% else %}
+                <td></td>
+                {% endif %}
+
+            </tr>
+            {% empty %}
+            <p>No comments yet!</p>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
             <div class="comment-form-box">
                 <form class="comment-form" action="{% url 'add_comment' post.id %}" method="post">
