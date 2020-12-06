@@ -191,7 +191,10 @@ a:hover {
        word-wrap: break-word;
 }
 .post-title {
-    width: 150px;
+    width: 900px;
+    word-wrap: break-word;
+    border-bottom: black 1px solid;
+    padding-bottom: 10px;
 }
 .by {
     /* margin-left: 50px; */
