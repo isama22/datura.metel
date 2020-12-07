@@ -34,7 +34,7 @@
                                 {% endif %}
                             </div>
                             <p class="pop-up-text">{{ post.description|truncatewords:5 }}</p>
-                            {% if post.comment %}
+                            {% if post.comment_set.all|length > 0 %}
                             <p>comments: {{ post.comment_set.all.count }}</p>
                             {% else %}
                             <span></span>
