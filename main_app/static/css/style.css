@@ -77,20 +77,26 @@ a:hover {
 }
 
 .grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 19px 19px;
     grid-template-areas: ". . . ." ". . . ." ". . . .";
     padding-top: 10px;
-    margin-left: 12px;
+    margin-left: 12px; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-flow: row wrap;
+    /* margin: 20px; */
+
+
 }
 
 .post-box {
     background-color: rgba(219, 230, 226, 0.4);
     width: 145px;
     height: 150px;
-    /* margin: 20px; */
+    margin: 20px;
     border: solid 1px grey;
     border-radius: 10px;
     display: flex;
